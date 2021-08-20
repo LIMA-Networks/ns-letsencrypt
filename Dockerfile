@@ -11,6 +11,8 @@ RUN echo "#!/bin/sh" > ${CRONTAB_FILE} && \
      chmod 0744 ${CRONTAB_FILE}
 
 COPY ./docker/entrypoint.sh /
+
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["crond", "-f", "-d", "8" ]
