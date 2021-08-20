@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add --no-cache python3 py3-pip openssl curl bash
+RUN apk add --no-cache python3 py3-pip openssl curl bash git
 
 RUN pip3 install requests
 
